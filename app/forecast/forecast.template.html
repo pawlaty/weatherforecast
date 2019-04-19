@@ -1,0 +1,35 @@
+<h1>I'm forecast for:  {{samplecity |uppercase}}  to : <b><i>{{days}} </i></b>dni</h1>
+<hr/>
+<nav>
+    DAYS:
+    <a href="#!/forecast/1" ng-class="{'p-2 mb-2 bg-secondary text-white': days==='1'}">1</a>|
+    <a href="#!/forecast/3" ng-class="{'p-2 mb-2 bg-secondary text-white': days==='3'}">3</a>|
+    <a href="#!/forecast/5" ng-class="{'p-2 mb-2 bg-secondary text-white': days==='5'}">5</a>|
+    <a href="#!/forecast/7" ng-class="{'p-2 mb-2 bg-secondary text-white': days==='7'}">7</a>|
+</nav>
+<hr/>
+<div ng-repeat="w in city_object.list">
+    <div class="row" ng-cloak>
+        <div class="col-md-12 offset-1  list-group list-group-flush">
+
+            <a href="#!/forecast-detail/{{w.dt}}">
+                
+            <!--tu wstawic dyrektywe-->
+                <div class="card " style="width:28rem; margin-bottom: 1rem;" >
+                    <div class="card-header">
+                        <h3 class="card-title">{{ConvertToDate(w.dt*1000)|date:'d.MM.yy'  }}</h3>
+                        <h4 class="card-title">godz. {{ConvertToDate(w.dt*1000)|date:'HH:mm'}}</h4>
+                    </div>
+                    <div class=" card-body">
+                        <strong> daytime temperature: </strong>
+                        <p>Faranheith:  <strong>{{ConvertToFaranheith(w.main.temp)}}</strong><br>
+                        W celciuszach: <strong>{{ConvertToCelc(w.main.temp)}}</strong></p>
+                
+                    </div>
+                </div>
+            <!--tu kniec dyrektywy-->
+            </a>
+        </div>
+    </div>
+</div>
+

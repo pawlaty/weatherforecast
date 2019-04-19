@@ -1,0 +1,22 @@
+<h1>hello im weather detail</h1>
+</hr>
+<div class="row" ng-cloak>
+        <div class="col-md-10">
+          
+            <!--tu wstawic dyrektywe-->
+                <div class="card " style="width:28rem; margin-bottom: 1rem;" >
+                    <div class="card-header">
+                        <h3 class="card-title">{{myCity && myCity.dt_txt  }}</h3>
+                        <h4 class="card-title">godz. {{myCity.toString()}}</h4>
+                    </div>
+                    <div class=" card-body">
+                        <strong> daytime temperature: </strong>
+                        <p>Faranheith:  <strong>asdasdsdasd{{myCity.main.temp}}</strong><br>
+                        W celciuszach: <strong>bbbbbbbbbbbbbb{{myCity.main.temp}}</strong></p>
+                
+                    </div>
+                </div>
+            <!--tu kniec dyrektywy-->
+            
+        </div>
+    </div>

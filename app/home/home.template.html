@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-md-6 offset-md-2">
+        <h4>Forecast by City</h4>
+
+        <form ng-submit="submit()">
+            <div class="form-group justify-content flex">
+                
+                <input type="text" ng-model="city" class="form-control"/>
+            <br>
+                
+                <select class="col-sml-4 form-group" select="{{dni}}" ng-model="dni" name="dni">
+                    <option value="1">1 dzień</option>
+                    <option value="3">3 dni</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="14">14</option>
+                </select>
+            </div>
+              <br>
+             <!-- <a href="#!forecast" class="btn btn-secondary">Get Forecast</a>--> 
+            <input type="submit" value="GetForecast" class="btn btn-secondary"/>
+     </form>
+    </div>
+</div>

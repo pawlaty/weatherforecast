@@ -1,0 +1,17 @@
+html{
+    font-size: 1.05rem;
+   background-color: teal;
+}
+
+.navbar{
+    background-color: bisque;
+}
+
+i, a, .material-icons, .navbar-brand{
+    color:green;
+}
+
+i:hover,.mylink:hover, a:hover, .material-icons:hover, .navbar-brand:hover{
+    color:red;
+    text-decoration: none;
+}
